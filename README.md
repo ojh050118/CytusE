@@ -1,4 +1,4 @@
- Circle
+# Cytus E!
 
 [![Build status](https://github.com/ojh050118/CytusE/actions/workflows/ci.yml/badge.svg?branch=master&event=push)](https://github.com/ojh050118/CytusE/actions/workflows/ci.yml)
 [![GitHub release](https://img.shields.io/github/release/ojh050118/CytusE.svg)](https://github.com/ojh050118/CytusE/releases/latest)
