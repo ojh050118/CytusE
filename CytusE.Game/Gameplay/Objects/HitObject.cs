@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using CytusE.Game.Gameplay.Judgements;
@@ -15,11 +14,6 @@ namespace CytusE.Game.Gameplay.Objects
     public class HitObject
     {
         private const double control_point_leniency = 1;
-
-        /// <summary>
-        /// Invoked after <see cref="ApplyDefaults"/> has completed on this <see cref="HitObject"/>.
-        /// </summary>
-        public event Action<HitObject> DefaultsApplied;
 
         public readonly Bindable<double> StartTimeBindable = new BindableDouble();
 
@@ -55,13 +49,6 @@ namespace CytusE.Game.Gameplay.Objects
         [NotNull]
         public virtual Judgement CreateJudgement() => new Judgement();
 
-        /// <summary>
-        /// Creates the <see cref="HitWindows"/> for this <see cref="HitObject"/>.
-        /// This can be null to indicate that the <see cref="HitObject"/> has no <see cref="HitWindows"/> and timing errors should not be displayed to the user.
-        /// <para>
-        /// This will only be invoked if <see cref="HitWindows"/> hasn't been set externally (e.g. from a <see cref="BeatmapConverter{T}"/>.
-        /// </para>
-        /// </summary>
         [NotNull]
         protected virtual HitWindows CreateHitWindows() => new HitWindows();
     }
@@ -76,6 +63,7 @@ namespace CytusE.Game.Gameplay.Objects
         /// </remarks>
         /// <param name="hitObject">The object.</param>
         /// <returns>The end time of this object.</returns>
+        // ReSharper disable once SuspiciousTypeConversion.Global
         public static double GetEndTime(this HitObject hitObject) => (hitObject as IHasDuration)?.EndTime ?? hitObject.StartTime;
     }
 }

@@ -1,4 +1,3 @@
-using CytusE.Game.Gameplay.Judgements;
 using CytusE.Game.Gameplay.Objects.Drawables;
 using osu.Framework.Bindables;
 using osu.Framework.Graphics.Performance;
@@ -11,12 +10,6 @@ namespace CytusE.Game.Gameplay.Objects
         /// The <see cref="HitObject"/>.
         /// </summary>
         public readonly HitObject HitObject;
-
-        /// <summary>
-        /// The result that <see cref="HitObject"/> was judged with.
-        /// This is set by the accompanying <see cref="DrawableHitObject"/>, and reused when required for rewinding.
-        /// </summary>
-        internal JudgementResult Result;
 
         private readonly IBindable<double> startTimeBindable = new BindableDouble();
 
@@ -33,7 +26,7 @@ namespace CytusE.Game.Gameplay.Objects
 
             // Subscribe to this event before the DrawableHitObject so that the local callback is invoked before the entry is re-applied as a result of DefaultsApplied.
             // This way, the DrawableHitObject can use OnApply() to overwrite the LifetimeStart that was set inside setInitialLifetime().
-            HitObject.DefaultsApplied += _ => SetInitialLifetime();
+            //HitObject.DefaultsApplied += _ => SetInitialLifetime();
         }
 
         // The lifetime, as set by the hitobject.

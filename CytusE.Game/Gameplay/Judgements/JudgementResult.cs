@@ -1,5 +1,4 @@
 using CytusE.Game.Gameplay.Objects;
-using CytusE.Game.Gameplay.Objects.Drawables;
 using CytusE.Game.Gameplay.Scoring;
 using JetBrains.Annotations;
 
@@ -24,10 +23,6 @@ namespace CytusE.Game.Gameplay.Judgements
         [NotNull]
         public readonly Judgement Judgement;
 
-        /// <summary>
-        /// The offset from a perfect hit at which this <see cref="JudgementResult"/> occurred.
-        /// Populated when this <see cref="JudgementResult"/> is applied via <see cref="DrawableHitObject.ApplyResult"/>.
-        /// </summary>
         public double TimeOffset { get; internal set; }
 
         /// <summary>
