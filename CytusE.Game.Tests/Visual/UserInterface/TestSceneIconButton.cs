@@ -15,9 +15,9 @@ namespace CytusE.Game.Tests.Visual.UserInterface
         {
             IconButton enabledButton, disabledButton;
             BindableBool enabled = new BindableBool(true);
-            BindableBool disabled = new BindableBool(false);
+            BindableBool disabled = new BindableBool();
 
-            Add(new Box()
+            Add(new Box
             {
                 RelativeSizeAxes = Axes.Both,
                 Colour = Color4.Gray

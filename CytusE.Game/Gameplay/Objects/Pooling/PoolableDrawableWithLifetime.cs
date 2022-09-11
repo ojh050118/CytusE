@@ -124,6 +124,7 @@ namespace CytusE.Game.Gameplay.Objects.Pooling
         private void setLifetimeFromEntry(LifetimeEntry entry)
         {
             Debug.Assert(entry == Entry);
+            Debug.Assert(entry != null);
             base.LifetimeStart = entry.LifetimeStart;
             base.LifetimeEnd = entry.LifetimeEnd;
         }

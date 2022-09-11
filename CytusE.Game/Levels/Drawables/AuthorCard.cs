@@ -18,7 +18,7 @@ namespace CytusE.Game.Levels.Drawables
     public class AuthorCard : Card
     {
         public readonly IEnumerable<Level> Levels;
-        public Level Selected { get; }
+        public Level Selected { get; private set; }
 
         public const float TRANSITION_DURATION = 400;
 
@@ -31,12 +31,17 @@ namespace CytusE.Game.Levels.Drawables
         public AuthorCard(IEnumerable<Level> levels)
         {
             Levels = levels;
-            Selected = Levels.ToArray()[RNG.Next(0, Levels.Count())];
+
+            if (levels.Any())
+                Selected = Levels.ToArray()[RNG.Next(0, Levels.Count())];
         }
 
         [BackgroundDependencyLoader]
-        private void load()
+        private void load(DummyLevel dummyLevel)
         {
+            if (!Levels.Any())
+                Selected = dummyLevel;
+
             AddRange(new Drawable[]
             {
                 sizing = new Container(),

@@ -13,7 +13,7 @@ namespace CytusE.Game.Tests.Visual.UserInterface
             LoadingLayer spinner;
             Container container;
 
-            Add(new Box()
+            Add(new Box
             {
                 Colour = Color4.Gray,
                 RelativeSizeAxes = Axes.Both
