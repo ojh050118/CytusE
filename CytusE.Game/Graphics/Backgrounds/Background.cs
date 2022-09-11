@@ -67,7 +67,7 @@ namespace CytusE.Game.Graphics.Backgrounds
         {
             if (bufferedContainer == null && newBlurSigma != Vector2.Zero)
             {
-                RemoveInternal(Sprite);
+                RemoveInternal(Sprite, true);
 
                 AddInternal(bufferedContainer = new BufferedContainer(cachedFrameBuffer: true)
                 {
