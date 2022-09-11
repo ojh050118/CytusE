@@ -113,7 +113,7 @@ namespace CytusE.Game.Gameplay.Objects.Pooling
 
             OnFree(Entry);
 
-            Entry.LifetimeChanged -= setLifetimeFromEntry;
+            //Entry.LifetimeChanged -= setLifetimeFromEntry;
             entry = null;
             base.LifetimeStart = double.MinValue;
             base.LifetimeEnd = double.MaxValue;
