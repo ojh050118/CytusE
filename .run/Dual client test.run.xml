@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Dual client test" type="CompoundRunConfigurationType">
+    <toRun name="Cytus E!" type="DotNetProject" />
+    <toRun name="Cytus E! (Second Client)" type="DotNetProject" />
+    <method v="2" />
+  </configuration>
+</component>

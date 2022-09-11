@@ -1,0 +1,11 @@
+﻿{
+  "solution": {
+    "path": "CytusE.sln",
+    "projects": [
+      "CytusE.Desktop\\CytusE.Desktop.csproj",
+      "CytusE.Game\\CytusE.Game.csproj",
+      "CytusE.Game.Tests\\CytusE.Game.Tests.csproj",
+      "CytusE.Resources\\CytusE.Resources.csproj"
+    ]
+  }
+}
